@@ -1,54 +1,87 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f8f9fa;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #020617;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.login-btn {
+  background: #2563eb;
+  padding: 8px 14px;
+  border-radius: 5px;
 }
 
 .hero {
-  background: linear-gradient(135deg, #4fc3f7, #0288d1);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  animation: fadeIn 1.2s ease-in;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fade-in {
+  animation: fade 1s ease-in;
+}
+
+.fade-in-delay {
+  animation: fade 2s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .btn {
-  padding: 12px 30px;
-  background: #fff;
-  color: #0288d1;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #0288d1;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #2563eb;
   color: white;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
-.features {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin: 40px;
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
+  background: #020617;
+  padding: 30px;
+  text-align: center;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transform: scale(0.95);
-  animation: popIn 0.8s ease-out forwards;
+  transition: transform 0.3s;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(40px);}
-  to { opacity: 1; transform: translateY(0);}
+.card:hover {
+  transform: scale(1.05);
 }
 
-@keyframes popIn {
-  to { transform: scale(1); }
+.login-box {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
