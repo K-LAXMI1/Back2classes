@@ -1,3 +1,1 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Interactive Back2Classes loaded 🎉");
-});
+console.log("Back2Classes website loaded");
